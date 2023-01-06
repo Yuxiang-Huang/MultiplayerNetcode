@@ -1,4 +1,120 @@
+# Starting compiling UnityEngine.TestRunner.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-81e4f51af038a47b0af98e755adb46ab
+# Starting compiling UnityEngine.UI.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-0d87171c90e0144359292ac8ad75bd95
+# Starting compiling UnityEditor.TestRunner.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-52ba5a00ec951455b9a5ae3c14439b5c
+# Starting compiling UnityEditor.UI.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-de7d27ecd2cbd4e91aaf48dd2ff7a6f6
+# Starting compiling Unity.Services.Core.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-bb4aa691ea0d3466f82914cc983ded8f
+# Starting compiling Unity.VSCode.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-dae8afb2d115c4057a0072df6c5b3832
+# Starting compiling Unity.VisualStudio.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-dffba5aea626d498bb21ab68766dd5a8
+# Starting compiling Unity.Timeline.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-3367b04bff4004cf7934e6ea0e069def
+# Starting compiling Unity.TextMeshPro.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-05482942f542b4c90b48f811c1904930
+# Starting compiling Unity.PlasticSCM.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-98f8f62621cf345a5a3ff5d5d2a8f7a7
+# Starting compiling Unity.Timeline.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-cd3a75da086bf483aad98b183757e83f
+# Starting compiling Unity.Rider.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-ce6d25c80df4d4fa99306b2628f78b63
+# Starting compiling Unity.Networking.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-db47912e9c5f244449582a0fb2c5ddb1
+# Starting compiling Unity.Netcode.Editor.PackageChecker.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-7ecdda34864be4097a88e49852a7d886
+# Starting compiling Unity.CollabProxy.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-8af0ed5073b5a47609adc85cfc924a30
+# Starting compiling Unity.TextMeshPro.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-e8bace8419a364b21be27a409c7374b5
+# Starting compiling Unity.Mathematics.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-015dd65c9a79b4de3bddf379e895d0ab
+# Starting compiling Unity.Burst.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-4fb0fcd7becd540beaa6a03692c2d3f9
+# Starting compiling ParrelSync.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-25e567e3a883841738bb01dc0047cafa
+# Starting compiling Unity.Burst.CodeGen.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-dacea1b1c8ce8445b8203039c8fbaf6f
+# Starting compiling Unity.Burst.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-ee73ee502e6d643fb8fd2a85dd7fb0c3
+# Starting compiling Unity.Collections.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-467493eb2b51344a9905ab8dc72cfbbe
+# Starting compiling Unity.Mathematics.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-d2a06eb8be91a4da4aa7d1b8ec510b8d
+# Starting compiling Unity.Collections.DocCodeSamples.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-b97e70758a690429e83d386e117b5fd1
+# Starting compiling Unity.Networking.Transport.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-d482bd6b5adee4ffb8cd1607a25e5976
+# Starting compiling Unity.Collections.BurstCompatibilityGen.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-b9ed81ea4f8d843ecaa59dffe47a8310
+# Starting compiling Unity.Netcode.Runtime.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-bd63d927963c2421bb7261c244a213c0
+# Starting compiling Unity.Netcode.Editor.CodeGen.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-2a1fa2ebf26414ca588f5352b32fc1a4
+# Starting compiling Unity.Netcode.Components.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-7b4bfd6a523ea4b3d847e4403a6b94dc
+# Starting compiling Unity.Netcode.Editor.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-cbfcca33fee374e43bcad20c2b8b3b30
+# Starting IL post processing on UnityEngine.TestRunner.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-53db8141181f4483ba5029829d19ec47"
+# Starting IL post processing on UnityEngine.UI.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-1529493b8045c4070a83101d3d91801b"
+# Starting IL post processing on UnityEditor.TestRunner.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-5fa0985f303b14f8391554a699384a4b"
+# Starting IL post processing on UnityEditor.UI.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-b530b0bcf9f2541ad8332d2446c845dc"
 # Starting compiling Assembly-CSharp.dll
-/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-af85aaa89ec2f4ad682a88dcb8bef26e
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-e9b8e8cb5363f49a6b6ca3e57c27ed9e
+# Starting IL post processing on Unity.VSCode.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-75ff99900f2034c33af61018b2c5afb6"
+# Starting IL post processing on Unity.Services.Core.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-0a3e917184205403ab0da3c8935169cc"
+# Starting IL post processing on Unity.VisualStudio.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-77412703807e849d692dd07a1d5ac6a7"
+# Starting IL post processing on Unity.Timeline.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-c9379c70d35c24a3bacd8a2ff9a8e0f5"
+# Starting IL post processing on Unity.Rider.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-2d6721a5e7fc64301b0128dd37225283"
+# Starting IL post processing on Unity.Networking.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-06744eacb42fe4a2c850efa545a18f99"
+# Starting IL post processing on Unity.PlasticSCM.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-727db784fca264a97971d3bbd0a3d7cd"
+# Starting IL post processing on Unity.TextMeshPro.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-e24b0f9e1412c49ad92fe2971db6acf3"
+# Starting IL post processing on Unity.Timeline.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-e051fa690e074418285aa6409e9e39d6"
+# Starting IL post processing on Unity.Netcode.Editor.PackageChecker.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-a5db82625909845319cf9b14290d23d5"
+# Starting IL post processing on Unity.CollabProxy.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-3b1503f7796fa4d3e95f5145094554bc"
+# Starting IL post processing on Unity.TextMeshPro.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-aa95189f37c4c4fb4b58676484e7709d"
+# Starting IL post processing on ParrelSync.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-67d2aff83c8f1414da9fb2966f384721"
+# Starting IL post processing on Unity.Burst.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-c63b759c23c5d45359b590d5c1fc2dcf"
+# Starting IL post processing on Unity.Burst.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-ea701e43a94d7415fbc2e614e477813f"
+# Starting IL post processing on Unity.Mathematics.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-b5058c615cad448d79478745b17335f5"
+# Starting IL post processing on Unity.Mathematics.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-d705a15412d7649caa7184fd3d509a29"
+# Starting IL post processing on Unity.Collections.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-c349fd2a420b249d6afedc7205aed79d"
+# Starting IL post processing on Unity.Collections.DocCodeSamples.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-0545dd8f3f1874e7a94ab00b45b65862"
+# Starting IL post processing on Unity.Networking.Transport.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-3d0514be0694f42959495ef239119ae6"
+# Starting IL post processing on Unity.Collections.BurstCompatibilityGen.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-5ee42713006f648f0bbaf53e10d9459e"
+# Starting IL post processing on Unity.Netcode.Runtime.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-7b4a9f26dd900429eaff09b74b368229"
+# Starting IL post processing on Unity.Netcode.Components.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-1860430b8befe479fb7af4c01de49bdc"
+# Starting IL post processing on Unity.Netcode.Editor.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-b3fd8ad384d1b4eafa165889a0ebbbca"
 # Starting IL post processing on Assembly-CSharp.dll
-/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-9b34ebab46ebb4b02ba2a6e16a5dc577"
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer/Temp/UnityTempFile-081543993196d4dc585b8b5a4d8caa22"
