@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
 
 public class Menu : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class Menu : MonoBehaviour
 
     void startHost()
     {
-        NetworkingManager
+        
     }
 
     void startClient()
