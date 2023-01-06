@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 public class Menu : MonoBehaviour
 {
@@ -18,13 +19,15 @@ public class Menu : MonoBehaviour
         
     }
 
-    void startHost()
+    public void startHost()
     {
-        
+        NetworkManager.Singleton.StartHost();
+        menu.SetActive(false);
     }
 
-    void startClient()
+    public void startClient()
     {
-
+        NetworkManager.Singleton.StartClient();
+        menu.SetActive(false);
     }
 }
