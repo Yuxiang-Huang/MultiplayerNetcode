@@ -13,16 +13,22 @@ public class ScreenManager : NetworkBehaviour
     private NetworkVariable<int> numofPlayer = new NetworkVariable<int>(0,
         NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         connect.SetActive(true);
         main.SetActive(false);
+
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(OwnerClientId + ": " + gameManager.display.text);
+        
         playersInGame.text = "Number of player: " + numofPlayer.Value;
     }
 
@@ -30,7 +36,7 @@ public class ScreenManager : NetworkBehaviour
     {
         NetworkManager.Singleton.StartHost();
         connect.SetActive(false);
-        main.SetActive(true);
+        //main.SetActive(true);
 
         numofPlayer.Value++;
     }
@@ -39,7 +45,7 @@ public class ScreenManager : NetworkBehaviour
     {
         NetworkManager.Singleton.StartClient();
         connect.SetActive(false);
-        main.SetActive(true);
+        //main.SetActive(true);
 
         numofPlayer.Value++;
     }
