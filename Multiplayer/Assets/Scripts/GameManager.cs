@@ -6,11 +6,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
-    public TextMeshProUGUI display;
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +16,5 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void generateNumber()
-    {
-        display.text = "" + Random.Range(0, 10);
     }
 }

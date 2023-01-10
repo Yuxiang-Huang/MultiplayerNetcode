@@ -7,11 +7,10 @@ using TMPro;
 public class ScreenManager : NetworkBehaviour
 {
     public GameObject connect;
-    public GameObject main;
-    public TextMeshProUGUI playersInGame;
+    //public TextMeshProUGUI playersInGame;
 
-    private NetworkVariable<int> numofPlayer = new NetworkVariable<int>(0,
-        NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    //private NetworkVariable<int> numofPlayer = new NetworkVariable<int>(0,
+    //    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     GameManager gameManager;
 
@@ -19,7 +18,6 @@ public class ScreenManager : NetworkBehaviour
     void Start()
     {
         connect.SetActive(true);
-        main.SetActive(false);
 
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
@@ -29,24 +27,22 @@ public class ScreenManager : NetworkBehaviour
     {
         //Debug.Log(OwnerClientId + ": " + gameManager.display.text);
         
-        playersInGame.text = "Number of player: " + numofPlayer.Value;
+        //playersInGame.text = "Number of player: " + numofPlayer.Value;
     }
 
     public void startHost()
     {
         NetworkManager.Singleton.StartHost();
         connect.SetActive(false);
-        //main.SetActive(true);
 
-        numofPlayer.Value++;
+        //numofPlayer.Value++;
     }
 
     public void startClient()
     {
         NetworkManager.Singleton.StartClient();
         connect.SetActive(false);
-        //main.SetActive(true);
 
-        numofPlayer.Value++;
+        //numofPlayer.Value++;
     }
 }
