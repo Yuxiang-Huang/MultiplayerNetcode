@@ -4,13 +4,14 @@ using UnityEngine;
 using Unity.Netcode;
 using TMPro;
 
-public class ScreenManager : MonoBehaviour
+public class ScreenManager : NetworkBehaviour
 {
     public GameObject connect;
     public GameObject main;
     public TextMeshProUGUI playersInGame;
 
-    private NetworkVariable<int> numofPlayer = new NetworkVariable<int>();
+    private NetworkVariable<int> numofPlayer = new NetworkVariable<int>(0,
+        NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,8 @@ public class ScreenManager : MonoBehaviour
         NetworkManager.Singleton.StartHost();
         connect.SetActive(false);
         main.SetActive(true);
+
+        numofPlayer.Value++;
     }
 
     public void startClient()
@@ -37,5 +40,7 @@ public class ScreenManager : MonoBehaviour
         NetworkManager.Singleton.StartClient();
         connect.SetActive(false);
         main.SetActive(true);
+
+        numofPlayer.Value++;
     }
 }

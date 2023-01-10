@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI display;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
