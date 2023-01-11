@@ -13,8 +13,7 @@ public class PlayerManager : NetworkBehaviour
     private NetworkVariable<int> randomInt = new NetworkVariable<int>(0,
         NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
-    private void Awake()
-    {
+    public override void OnNetworkSpawn() { 
         Debug.Log(OwnerClientId);
         float width = canvas.rect.width;
         playerSet.transform.position = new Vector3((OwnerClientId + 1) * width / 5,
@@ -26,15 +25,21 @@ public class PlayerManager : NetworkBehaviour
     void Update()
     {
         //Debug.Log(OwnerClientId + ": " + randomInt.Value);
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            randomInt.Value = Random.Range(0, 100);
-        }
     }
 
-    public void generateNumber()
+    [ServerRpc]
+    public void generateNumberServerRpc()
     {
         display.text = "" + Random.Range(0, 10);
+        randomInt.Value = Random.Range(0, 100);
+        Debug.Log(randomInt.Value);
+        displayNumberClientRpc();
+    }
+
+    [ClientRpc]
+    public void displayNumberClientRpc()
+    {
+        Debug.Log(OwnerClientId + ": " + randomInt.Value);
+        display.text = "" + randomInt.Value;
     }
 }
