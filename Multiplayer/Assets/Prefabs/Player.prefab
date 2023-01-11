@@ -697,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1596819498682973004}
+  playerSetRect: {fileID: 8219361799849742700}
   playerSet: {fileID: 6936087517829837996}
   displayCard: {fileID: 1596819499585141002}
   displayWord: {fileID: 1596819499801438915}

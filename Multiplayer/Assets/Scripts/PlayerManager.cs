@@ -9,6 +9,7 @@ using TMPro;
 public class PlayerManager : NetworkBehaviour
 {
     public RectTransform canvas;
+    public RectTransform playerSetRect;
     public GameObject playerSet;
     public TextMeshProUGUI displayCard;
     public TextMeshProUGUI displayWord;
@@ -45,8 +46,16 @@ public class PlayerManager : NetworkBehaviour
 
     //code body
     public override void OnNetworkSpawn() {
+        //middle left
+        if (OwnerClientId == 0)
+        {
+            playerSetRect.anchorMin = new Vector2(0, 0.5f);
+            playerSetRect.anchorMax = new Vector2(0, 0.5f);
+            playerSetRect.pivot = new Vector2(0, 0.5f);
+        }
+
         float width = canvas.rect.width;
-        playerSet.transform.position = new Vector3((OwnerClientId + 1) * width / 5 - width/2,
+        playerSet.transform.position = new Vector3((OwnerClientId * 2 + 1) * width / 10 - width / 2,
             playerSet.transform.position.y, playerSet.transform.position.z);
 
         createList();

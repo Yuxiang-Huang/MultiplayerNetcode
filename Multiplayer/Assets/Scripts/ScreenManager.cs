@@ -1,23 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
+using Unity.Services.Core;
+using Unity.Services.Authentication;
+using Unity.Services.Relay;
+using Unity.Services.Relay.Http;
+using Unity.Services.Relay.Models;
 using Unity.Netcode;
-using TMPro;
+using Unity.Netcode.Transports.UTP;
+using Unity.Networking.Transport;
+using Unity.Networking.Transport.Relay;
+using NetworkEvent = Unity.Networking.Transport.NetworkEvent;
 
 public class ScreenManager : NetworkBehaviour
 {
     public GameObject connect;
-    //public Canvas MyUI;
-    //public TextMeshProUGUI playersInGame;
-
-    //private NetworkVariable<int> numofPlayer = new NetworkVariable<int>(0,
-    //    NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     // Start is called before the first frame update
     void Start()
     {
         connect.SetActive(true);
     }
+
 
     // Update is called once per frame
     void Update()
