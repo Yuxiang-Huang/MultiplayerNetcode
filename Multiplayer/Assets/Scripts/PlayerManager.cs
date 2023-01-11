@@ -45,7 +45,6 @@ public class PlayerManager : NetworkBehaviour
 
     //code body
     public override void OnNetworkSpawn() {
-
         float width = canvas.rect.width;
         playerSet.transform.position = new Vector3((OwnerClientId + 1) * width / 5 - width/2,
             playerSet.transform.position.y, playerSet.transform.position.z);
@@ -53,8 +52,6 @@ public class PlayerManager : NetworkBehaviour
         createList();
 
         generateWord();
-
-        //if (!IsOwner) Destroy(this);
     }
 
     void createList()
@@ -98,11 +95,15 @@ public class PlayerManager : NetworkBehaviour
     }
 
     public void reveal() {
+        if (!IsOwner) return;
+
         revealed = true;
     }
 
     public void win()
     {
+        if (!IsOwner) return;
+
         data.Value = new CustomData
         {
             cards = data.Value.cards + 1,
@@ -114,6 +115,8 @@ public class PlayerManager : NetworkBehaviour
 
     public void lose()
     {
+        if (!IsOwner) return;
+
         data.Value = new CustomData
         {
             cards = data.Value.cards - 1,
@@ -126,6 +129,8 @@ public class PlayerManager : NetworkBehaviour
 
     public void generateWord()
     {
+        if (!IsOwner) return;
+
         data.Value = new CustomData
         {
             cards = data.Value.cards,
