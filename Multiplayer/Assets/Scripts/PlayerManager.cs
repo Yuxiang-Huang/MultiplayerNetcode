@@ -12,7 +12,10 @@ public class PlayerManager : NetworkBehaviour
     public GameObject playerSet;
     public TextMeshProUGUI displayCard;
     public TextMeshProUGUI displayWord;
+
     public Button revealBtn;
+    public Button winCard;
+    public Button loseCard;
 
     public bool revealed = false;
 
@@ -50,6 +53,8 @@ public class PlayerManager : NetworkBehaviour
         createList();
 
         generateWord();
+
+        //if (!IsOwner) Destroy(this);
     }
 
     void createList()
@@ -60,6 +65,7 @@ public class PlayerManager : NetworkBehaviour
         allWords.Add("Laugh");
         allWords.Add("Touch hands");
         allWords.Add("Reject to answer");
+        allWords.Add("Guess the phrase");
     }
 
 
@@ -78,16 +84,49 @@ public class PlayerManager : NetworkBehaviour
             displayWord.text = "";
             revealBtn.gameObject.SetActive(true);
         }
+
+        if (revealed)
+        {
+            winCard.gameObject.SetActive(true);
+            loseCard.gameObject.SetActive(true);
+        }
+        else
+        {
+            winCard.gameObject.SetActive(false);
+            loseCard.gameObject.SetActive(false);
+        }
     }
 
     public void reveal() {
         revealed = true;
     }
 
+    public void win()
+    {
+        data.Value = new CustomData
+        {
+            cards = data.Value.cards + 1,
+            word = allWords[Random.Range(0, allWords.Count)]
+        };
+
+        revealed = false;
+    }
+
+    public void lose()
+    {
+        data.Value = new CustomData
+        {
+            cards = data.Value.cards - 1,
+            word = allWords[Random.Range(0, allWords.Count)]
+        };
+
+        revealed = false;
+    }
+
+
     public void generateWord()
     {
         if (!IsOwner) return;
-
 
         data.Value = new CustomData
         {
