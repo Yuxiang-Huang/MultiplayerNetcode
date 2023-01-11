@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13294cf1512a4dbcad99fe961890b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  display: {fileID: 0}
 --- !u!4 &155653628
 Transform:
   m_ObjectHideFlags: 0
@@ -232,7 +231,7 @@ MonoBehaviour:
     PlayerPrefab: {fileID: 1596819499286346943, guid: 590454f6f7c904b67a1e5f942516455e, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 0}
+      Prefab: {fileID: 1596819499286346943, guid: 590454f6f7c904b67a1e5f942516455e, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}

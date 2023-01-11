@@ -24,22 +24,15 @@ public class PlayerManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(OwnerClientId + ": " + randomInt.Value);
+        display.text = "" + randomInt.Value;
     }
 
-    [ServerRpc]
-    public void generateNumberServerRpc()
+    public void generateNumber()
     {
+        if (!IsOwner) return;
+
         display.text = "" + Random.Range(0, 10);
         randomInt.Value = Random.Range(0, 100);
         Debug.Log(randomInt.Value);
-        displayNumberClientRpc();
-    }
-
-    [ClientRpc]
-    public void displayNumberClientRpc()
-    {
-        Debug.Log(OwnerClientId + ": " + randomInt.Value);
-        display.text = "" + randomInt.Value;
     }
 }
