@@ -6,17 +6,21 @@ using TMPro;
 
 public class PlayerManager : NetworkBehaviour
 {
-    public GameObject main;
+    public RectTransform canvas;
+    public GameObject playerSet;
     public TextMeshProUGUI display;
 
     private NetworkVariable<int> randomInt = new NetworkVariable<int>(0,
         NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        Debug.Log(OwnerClientId);
+        float width = canvas.rect.width;
+        playerSet.transform.position = new Vector3((OwnerClientId + 1) * width / 5,
+            playerSet.transform.position.y, playerSet.transform.position.z);
     }
+
 
     // Update is called once per frame
     void Update()
