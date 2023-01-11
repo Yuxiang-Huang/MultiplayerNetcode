@@ -32,7 +32,7 @@ RectTransform:
   m_Children:
   - {fileID: 1596819498725893007}
   m_Father: {fileID: 8219361799849742700}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1596819499286346936}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: generateNumber
+        m_MethodName: generateWord
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -163,7 +163,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1596819499585141003}
   - {fileID: 8219361799849742700}
   m_Father: {fileID: 1596819499286346937}
   m_RootOrder: 0
@@ -431,7 +430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1596819498682973004}
   playerSet: {fileID: 6936087517829837996}
-  display: {fileID: 1596819499801438915}
+  displayCard: {fileID: 1596819499585141002}
+  displayWord: {fileID: 1596819499801438915}
 --- !u!1 &1596819499585141000
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 1596819499585141109}
   - component: {fileID: 1596819499585141002}
   m_Layer: 5
-  m_Name: NumOfPlayer
+  m_Name: Cards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,16 +457,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596819499585141000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1596819498682973004}
+  m_Father: {fileID: 8219361799849742700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 432, y: 363}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1596819499585141109
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 1596819499801438914}
   - component: {fileID: 1596819499801438915}
   m_Layer: 5
-  m_Name: Display
+  m_Name: Word
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,11 +596,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8219361799849742700}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 201}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1596819499801438914
@@ -727,10 +727,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1596819499585141003}
   - {fileID: 1596819499801438912}
   - {fileID: 1596819498625260961}
   m_Father: {fileID: 1596819498682973004}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
