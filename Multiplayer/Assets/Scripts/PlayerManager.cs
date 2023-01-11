@@ -44,10 +44,10 @@ public class PlayerManager : NetworkBehaviour
     }
 
     //code body
-    public override void OnNetworkSpawn() { 
-        Debug.Log(OwnerClientId);
+    public override void OnNetworkSpawn() {
+
         float width = canvas.rect.width;
-        playerSet.transform.position = new Vector3((OwnerClientId + 1) * width / 5,
+        playerSet.transform.position = new Vector3((OwnerClientId + 1) * width / 5 - width/2,
             playerSet.transform.position.y, playerSet.transform.position.z);
 
         createList();
@@ -126,8 +126,6 @@ public class PlayerManager : NetworkBehaviour
 
     public void generateWord()
     {
-        if (!IsOwner) return;
-
         data.Value = new CustomData
         {
             cards = data.Value.cards,
