@@ -1,23 +1,40 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using UnityEngine;
-using Unity.Services.Core;
-using Unity.Services.Authentication;
-using Unity.Services.Relay;
-using Unity.Services.Relay.Http;
-using Unity.Services.Relay.Models;
+using TMPro;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
-using Unity.Networking.Transport;
-using Unity.Networking.Transport.Relay;
-using NetworkEvent = Unity.Networking.Transport.NetworkEvent;
+using Unity.Services.Authentication;
+using Unity.Services.Core;
+using Unity.Services.Relay;
+using Unity.Services.Relay.Models;
+using UnityEngine;
 
 public class ScreenManager : NetworkBehaviour
 {
+    public TextMeshProUGUI joinCodeText;
+    public TMP_InputField joinInput;
+    public GameObject buttons;
+
+    private UnityTransport transport;
+    private const int MaxPlayer = 4;
+
     public GameObject connect;
+
+    private async void Awake()
+    {
+        transport = FindObjectOfType<UnityTransport>();
+
+        buttons.SetActive(false);
+
+        await Authenticate();
+
+        buttons.SetActive(true);
+    }
+
+    public static async Task Authenticate()
+    {
+        await UnityServices.InitializeAsync();
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+    }
 
     // Start is called before the first frame update
     void Start()
