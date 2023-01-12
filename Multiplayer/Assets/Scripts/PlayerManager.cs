@@ -24,6 +24,8 @@ public class PlayerManager : NetworkBehaviour
 
     List<string> allWords = new List<string>();
 
+    public int corNum;
+
     //initialize data
     private NetworkVariable<CustomData> data = new NetworkVariable<CustomData>(
         new CustomData
@@ -53,37 +55,18 @@ public class PlayerManager : NetworkBehaviour
     public override void OnNetworkSpawn() {
         ScreenManager screenManager = GameObject.Find("Screen Manager").GetComponent<ScreenManager>();
 
-        int maxPlayer = screenManager.MaxPlayer;
-
         //change name
-        data.Value = new CustomData
+        if (IsOwner)
         {
-            cards = 5,
-            word = "",
-            playerName = new FixedString128Bytes(screenManager.playerName.text)
-        };
-
-        Debug.Log(data.Value.playerName);
-
-        //middle left
-        if (((int)OwnerClientId) < maxPlayer / 2)
-        {
-            playerSetRect.anchorMin = new Vector2(0, 0.5f);
-            playerSetRect.anchorMax = new Vector2(0, 0.5f);
-            playerSetRect.pivot = new Vector2(0, 0.5f);
+            data.Value = new CustomData
+            {
+                cards = 5,
+                word = "",
+                playerName = new FixedString128Bytes(screenManager.playerName.text)
+            };
         }
 
-        //middle right
-        if (((int)OwnerClientId) > maxPlayer / 2)
-        {
-            playerSetRect.anchorMin = new Vector2(1, 0.5f);
-            playerSetRect.anchorMax = new Vector2(1, 0.5f);
-            playerSetRect.pivot = new Vector2(1, 0.5f);
-        }
-
-        float width = canvas.rect.width;
-        playerSet.transform.position = new Vector3((OwnerClientId * 2 + 1) * width / maxPlayer / 2 - width / 2,
-            playerSet.transform.position.y, playerSet.transform.position.z);
+        corNum = (int)OwnerClientId;
 
         createList();
 
@@ -106,7 +89,6 @@ public class PlayerManager : NetworkBehaviour
     void Update()
     {
         //update text
-        Debug.Log(data.Value.playerName);
         playerName.text = "" + data.Value.playerName;
         displayCard.text = "Cards Left: " + data.Value.cards;
 
@@ -131,6 +113,31 @@ public class PlayerManager : NetworkBehaviour
         {
             winCard.gameObject.SetActive(false);
             loseCard.gameObject.SetActive(false);
+        }
+
+        //position
+        float width = canvas.rect.width;
+        playerSet.transform.position = new Vector3((corNum * 2 + 1) * width / 9 - width / 2,
+            playerSet.transform.position.y, playerSet.transform.position.z);
+
+        //middle left
+        if (corNum < 5 / 2.0)
+        {
+            playerSetRect.anchorMin = new Vector2(0, 0.5f);
+            playerSetRect.anchorMax = new Vector2(0, 0.5f);
+            playerSetRect.pivot = new Vector2(0, 0.5f);
+            playerSet.transform.position = new Vector3((corNum * 2 + 1) * width / 9,
+    playerSet.transform.position.y, playerSet.transform.position.z);
+        }
+
+        //middle right
+        if (corNum > 5 / 2.0)
+        {
+            playerSetRect.anchorMin = new Vector2(1, 0.5f);
+            playerSetRect.anchorMax = new Vector2(1, 0.5f);
+            playerSetRect.pivot = new Vector2(1, 0.5f);
+            playerSet.transform.position = new Vector3((corNum * 2 + 1) * width / 9 + width / 2,
+            playerSet.transform.position.y, playerSet.transform.position.z);
         }
     }
 

@@ -1,0 +1,4 @@
+# Starting compiling Assembly-CSharp.dll
+/Applications/Unity/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-a6797f0aaa3e04fa1afbfa11c35c1c6d
+# Starting IL post processing on Assembly-CSharp.dll
+/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono "/Applications/Unity/Unity.app/Contents/Tools/ILPostProcessorRunner/ILPostProcessorRunner.exe" @"/Users/yuxianghuang/Multiplayer/Multiplayer_clone_0/Temp/UnityTempFile-a936e318f316542ed895bf319eff9a6e"
