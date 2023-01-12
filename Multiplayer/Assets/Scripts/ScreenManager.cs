@@ -12,10 +12,12 @@ public class ScreenManager : NetworkBehaviour
 {
     public TextMeshProUGUI joinCodeText;
     public TMP_InputField joinInput;
+    public TMP_InputField numOfPlayer;
+    public TMP_InputField playerName;
     public GameObject buttons;
 
     private UnityTransport transport;
-    private const int MaxPlayer = 4;
+    public int MaxPlayer = 5;
 
     public GameObject connect;
 
@@ -45,6 +47,8 @@ public class ScreenManager : NetworkBehaviour
     {
         buttons.SetActive(false);
 
+        //MaxPlayer = (int) numOfPlayer.text[0];
+
         Allocation a = await RelayService.Instance.CreateAllocationAsync(MaxPlayer);
 
         joinCodeText.text = "Join Code: " + await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
@@ -52,8 +56,6 @@ public class ScreenManager : NetworkBehaviour
         transport.SetRelayServerData(a.RelayServer.IpV4, (ushort)a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData);
 
         NetworkManager.Singleton.StartHost();
-
-        joinInput.gameObject.SetActive(false);
     }
 
     public async void joinGame()
@@ -66,7 +68,5 @@ public class ScreenManager : NetworkBehaviour
         a.HostConnectionData);
 
         NetworkManager.Singleton.StartClient();
-
-        joinInput.gameObject.SetActive(false);
     }
 }

@@ -14,6 +14,8 @@ public class PlayerManager : NetworkBehaviour
     public TextMeshProUGUI displayCard;
     public TextMeshProUGUI displayWord;
 
+    public TextMeshProUGUI playerName;
+
     public Button revealBtn;
     public Button winCard;
     public Button loseCard;
@@ -24,11 +26,12 @@ public class PlayerManager : NetworkBehaviour
 
     //initialize data
     private NetworkVariable<CustomData> data = new NetworkVariable<CustomData>(
-    new CustomData
-    {
-        cards = 5,
-        word = ""
-    },
+        new CustomData
+        {
+            cards = 5,
+            word = "",
+            playerName = "",
+        },
         NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     //my data
@@ -36,26 +39,50 @@ public class PlayerManager : NetworkBehaviour
     {
         public int cards;
         public FixedString128Bytes word;
+        public FixedString128Bytes playerName;
 
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
             serializer.SerializeValue(ref cards);
             serializer.SerializeValue(ref word);
+            serializer.SerializeValue(ref playerName);
         }
     }
 
     //code body
     public override void OnNetworkSpawn() {
+        ScreenManager screenManager = GameObject.Find("Screen Manager").GetComponent<ScreenManager>();
+
+        int maxPlayer = screenManager.MaxPlayer;
+
+        //change name
+        data.Value = new CustomData
+        {
+            cards = 5,
+            word = "",
+            playerName = new FixedString128Bytes(screenManager.playerName.text)
+        };
+
+        Debug.Log(data.Value.playerName);
+
         //middle left
-        if (OwnerClientId == 0)
+        if (((int)OwnerClientId) < maxPlayer / 2)
         {
             playerSetRect.anchorMin = new Vector2(0, 0.5f);
             playerSetRect.anchorMax = new Vector2(0, 0.5f);
             playerSetRect.pivot = new Vector2(0, 0.5f);
         }
 
+        //middle right
+        if (((int)OwnerClientId) > maxPlayer / 2)
+        {
+            playerSetRect.anchorMin = new Vector2(1, 0.5f);
+            playerSetRect.anchorMax = new Vector2(1, 0.5f);
+            playerSetRect.pivot = new Vector2(1, 0.5f);
+        }
+
         float width = canvas.rect.width;
-        playerSet.transform.position = new Vector3((OwnerClientId * 2 + 1) * width / 10 - width / 2,
+        playerSet.transform.position = new Vector3((OwnerClientId * 2 + 1) * width / maxPlayer / 2 - width / 2,
             playerSet.transform.position.y, playerSet.transform.position.z);
 
         createList();
@@ -65,7 +92,7 @@ public class PlayerManager : NetworkBehaviour
 
     void createList()
     {
-        allWords.Add("Say 'Cat'");
+        allWords.Add("Say 'Unbelievable'");
         allWords.Add("Say 'Apple'");
         allWords.Add("Say 'Dog'");
         allWords.Add("Laugh");
@@ -78,8 +105,12 @@ public class PlayerManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        //update text
+        Debug.Log(data.Value.playerName);
+        playerName.text = "" + data.Value.playerName;
         displayCard.text = "Cards Left: " + data.Value.cards;
 
+        //display cards that are not mine
         if (!IsOwner || revealed)
         {
             displayWord.text = "" + data.Value.word;
@@ -116,7 +147,8 @@ public class PlayerManager : NetworkBehaviour
         data.Value = new CustomData
         {
             cards = data.Value.cards + 1,
-            word = allWords[Random.Range(0, allWords.Count)]
+            word = allWords[Random.Range(0, allWords.Count)],
+            playerName = data.Value.playerName,
         };
 
         revealed = false;
@@ -129,7 +161,8 @@ public class PlayerManager : NetworkBehaviour
         data.Value = new CustomData
         {
             cards = data.Value.cards - 1,
-            word = allWords[Random.Range(0, allWords.Count)]
+            word = allWords[Random.Range(0, allWords.Count)],
+            playerName = data.Value.playerName,
         };
 
         revealed = false;
@@ -143,7 +176,8 @@ public class PlayerManager : NetworkBehaviour
         data.Value = new CustomData
         {
             cards = data.Value.cards,
-            word = allWords[Random.Range(0, allWords.Count)]
+            word = allWords[Random.Range(0, allWords.Count)],
+            playerName = data.Value.playerName,
         };
     }
 }
