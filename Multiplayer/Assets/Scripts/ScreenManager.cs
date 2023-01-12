@@ -30,23 +30,40 @@ public class ScreenManager : NetworkBehaviour
         buttons.SetActive(true);
     }
 
+    void Start()
+    {
+        connect.SetActive(true);
+    }
+
     public static async Task Authenticate()
     {
         await UnityServices.InitializeAsync();
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public async void createGame()
     {
-        connect.SetActive(true);
+        buttons.SetActive(false);
+
+        Allocation a = await RelayService.Instance.CreateAllocationAsync(MaxPlayer);
+
+        joinCodeText.text = await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
+
+        transport.SetRelayServerData(a.RelayServer.IpV4, (ushort)a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData);
+
+        startHost();
     }
 
+    public async void joinGame()
+    {
+        buttons.SetActive(false);
 
-    // Update is called once per frame
-    void Update()
-    {   
-        //playersInGame.text = "Number of player: " + numofPlayer.Value;
+        JoinAllocation a = await RelayService.Instance.JoinAllocationAsync(joinInput.text);
+
+        transport.SetClientRelayData(a.RelayServer.IpV4, (ushort)a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData,
+        a.HostConnectionData);
+
+        startClient();
     }
 
     public void startHost()
