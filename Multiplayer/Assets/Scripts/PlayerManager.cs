@@ -26,7 +26,7 @@ public class PlayerManager : NetworkBehaviour
     private NetworkVariable<CustomData> data = new NetworkVariable<CustomData>(
     new CustomData
     {
-        cards = 10,
+        cards = 5,
         word = ""
     },
         NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);

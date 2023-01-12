@@ -47,11 +47,13 @@ public class ScreenManager : NetworkBehaviour
 
         Allocation a = await RelayService.Instance.CreateAllocationAsync(MaxPlayer);
 
-        joinCodeText.text = await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
+        joinCodeText.text = "Join Code: " + await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
 
         transport.SetRelayServerData(a.RelayServer.IpV4, (ushort)a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData);
 
-        startHost();
+        NetworkManager.Singleton.StartHost();
+
+        joinInput.gameObject.SetActive(false);
     }
 
     public async void joinGame()
@@ -63,22 +65,8 @@ public class ScreenManager : NetworkBehaviour
         transport.SetClientRelayData(a.RelayServer.IpV4, (ushort)a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData,
         a.HostConnectionData);
 
-        startClient();
-    }
-
-    public void startHost()
-    {
-        NetworkManager.Singleton.StartHost();
-        connect.SetActive(false);
-        //MyUI.gameObject.SetActive(true);
-        //numofPlayer.Value++;
-    }
-
-    public void startClient()
-    {
         NetworkManager.Singleton.StartClient();
-        connect.SetActive(false);
-        //MyUI.gameObject.SetActive(true);
-        //numofPlayer.Value++;
+
+        joinInput.gameObject.SetActive(false);
     }
 }
