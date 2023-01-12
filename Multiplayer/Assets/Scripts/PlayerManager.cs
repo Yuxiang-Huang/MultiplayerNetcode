@@ -75,13 +75,36 @@ public class PlayerManager : NetworkBehaviour
 
     void createList()
     {
-        allWords.Add("Say 'Unbelievable'");
-        allWords.Add("Say 'Apple'");
-        allWords.Add("Say 'Dog'");
+        allWords.Add("Look Up");
+        allWords.Add("Look Down");
+        allWords.Add("Look Back");
+
+
+        allWords.Add("Hesitate");
+        allWords.Add("Compare");
+        allWords.Add("Ask");
         allWords.Add("Laugh");
-        allWords.Add("Touch hands");
+
+        allWords.Add("Agree");
+        allWords.Add("Disagree");
+
+        allWords.Add("Answer");
         allWords.Add("Reject to answer");
+
+        allWords.Add("Repeat");
+
         allWords.Add("Guess the phrase");
+        allWords.Add("Praise");
+        allWords.Add("Touch head");
+
+
+        allWords.Add("Say any name");
+        allWords.Add("Say any food");
+        allWords.Add("Say any subject");
+        allWords.Add("Say any animal");
+
+        allWords.Add("Say 'if'");
+        allWords.Add("Say 'Unbelievable'");
     }
 
 
